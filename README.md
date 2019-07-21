@@ -12,7 +12,7 @@ Included in the project root directory
 Included in the project root directory
 ```
 
-#### 3. Video of working application [click-to-watch](https://github.com/b117020/user-query-identification-StackOverflow/edit/master/README.md)
+#### 3. Video of working application [click-to-watch](https://youtu.be/jqG9qJ67kbo)
 
 
 #### 4. Steps to run
