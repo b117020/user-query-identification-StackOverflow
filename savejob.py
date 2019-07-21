@@ -10,8 +10,8 @@ freq=[]
 count=0
 fh=open('Tags.txt','r')
 fh2=open('cleaned.txt','r')
-tagrows=fh.read().split('\n')[:500000]
-X=fh2.read().split('\n')[:500000]
+tagrows=fh.read().split('\n')[:50000]
+X=fh2.read().split('\n')[:50000]
 Y = [[] for i in range(len(X))]
 classifier = Pipeline([
 		     ('vectorizer', CountVectorizer()),

@@ -111,7 +111,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.r1 = QtWidgets.QPushButton(self.layoutWidget1)
-        self.r1.setText("")
+        self.r1.setEnabled(True)
+        self.r1.setText("hy")
         self.r1.setObjectName("r1")
         self.verticalLayout_3.addWidget(self.r1)
         self.r2 = QtWidgets.QPushButton(self.layoutWidget1)
@@ -206,6 +207,8 @@ class Ui_MainWindow(object):
         self.ac.clicked.connect(self.acl.show)
         self.pushButton_3.clicked.connect(self.lf1.show)
         self.pushButton_4.clicked.connect(self.label_9.show)
+        self.pushButton_4.clicked.connect(self.r1.show)
+
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -217,7 +220,8 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "Tags                 "))
         self.lotags.setText(_translate("MainWindow", "Original Tags"))
         self.pushButton_4.setText(_translate("MainWindow", "Get Recommendations"))
-        self.label_9.setText(_translate("MainWindow", "RECOMMENDATIONS"))
+        self.label_9.setText(_translate("MainWindow", "                RECOMMENDATIONS"))
+        self.r1.setText(_translate("MainWindow", "                RECOMMENDATIONS"))
         self.ac.setText(_translate("MainWindow", "Get Accuracy"))
         self.pushButton_3.setText(_translate("MainWindow", "Get F1 Score"))
         self.pushButton_9.setText(_translate("MainWindow", "Clear"))

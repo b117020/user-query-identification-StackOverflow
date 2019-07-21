@@ -10,13 +10,13 @@ from sklearn.preprocessing import MultiLabelBinarizer
 
 s=set(stopwords.words('english'))
 stemmer = SnowballStemmer("english", ignore_stopwords=True)
-fh=open('tags.txt','r')
+fh=open('Tags.txt','r')
 fh2=open('cleaned.txt','r')
 tags={}
 freq=[]
 count=0
-tagrows=fh.read().split('\n')[:500000]
-X=fh2.read().split('\n')[:500000]
+tagrows=fh.read().split('\n')[:50000]
+X=fh2.read().split('\n')[:50000]
 Y = [[] for i in range(len(X))]
 
 for line in tagrows:

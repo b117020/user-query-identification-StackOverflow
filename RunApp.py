@@ -22,16 +22,16 @@ import pandas as pd
 
 s=set(stopwords.words('english'))
 stemmer = SnowballStemmer('english', ignore_stopwords=True)
-fh=open('tags.txt','r')
+fh=open('Tags.txt','r')
 fh2=open('cleaned.txt','r')
 _i=[]
 _t=[]
 _T=[]
 _b=[]
 count=0
-tagrows=fh.read().split('\n')[:5000]
+tagrows=fh.read().split('\n')[:500]
 checktags=[]
-X=fh2.read().split('\n')[:5000]
+X=fh2.read().split('\n')[:500]
 classifier = joblib.load('clf.txt')
 multibin = joblib.load('multibin.txt')
 vectorizer_2=CountVectorizer()
@@ -161,18 +161,21 @@ class SO(QMainWindow,Ui_MainWindow):
 		stemmed_words = [stemmer.stem(word) for word in words.split()]
 		clean_text = filter(lambda w: not w in s,stemmed_words)
 		words=''
+
 		for word in clean_text:
 			words+=word+' '
-		self.T.append(words)
+
+
+			self.T.append(words)
 		results=classifier.predict(self.T)
 		results=multibin.inverse_transform(results)
-		print ('\n',results,'\n')
+		print ('\n',str(results).replace('[','').replace(']','').replace('(','').replace(')',''),'\n')
 		buff=''
 		self.tagarr=[]
-		for result in results[0]:
-			buff=buff+QString(result)+' ; '
+		for result in results:
+			buff=buff+QString(result).replace('(','').replace(')','')+' '
 			self.tagarr.append(result)
-		self.lineEdit_2.setText(buff[:len(buff)-3])
+		self.lineEdit_2.setText(buff)
 		self.recommend()
 
 class RCMD(QDialog,Ui_Dialog):

@@ -20,7 +20,12 @@ Included in the project root directory
 ```
 1. Install all the required libraries.
    Use: - pip install <package-name>
-2. After installing libraries-
+2. Then run StackOverflow_CSV_Preprocessing.py to generate the required files
+   Use: python StackOverflow_CSV_Preprocessing.py
+3. At last:-
    Run command: python RunApp.py
    
 ```
+
+#### 5. Dataset used:- [click](https://www.kaggle.com/moulhanout/stack-overflow-2018-questions-data-set#training_set.csv)
+
