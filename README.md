@@ -1,5 +1,6 @@
 
 ## User Query on Stack Overflow
+![so](https://user-images.githubusercontent.com/31209617/61592336-b7299580-abef-11e9-9d70-87072addf770.png)
 
 #### 1. Idea 
 ```
